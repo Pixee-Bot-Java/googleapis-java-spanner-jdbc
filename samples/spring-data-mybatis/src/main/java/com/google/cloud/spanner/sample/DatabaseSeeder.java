@@ -26,6 +26,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UncheckedIOException;
 import java.math.BigDecimal;
+import java.security.SecureRandom;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -59,7 +60,7 @@ public class DatabaseSeeder {
           new Singer("Isabella", "Hernandez"),
           new Singer("Jacob", "Perez"));
 
-  private static final Random RANDOM = new Random();
+  private static final Random RANDOM = new SecureRandom();
 
   private final JdbcTemplate jdbcTemplate;
 
